@@ -1,0 +1,32 @@
+.outer-container {
+  margin: 1rem;
+}
+
+.message-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.message-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10px;
+  background-color: #f9f9f9;
+}
+
+.message-content {
+  color: #333;
+}
+
+.message-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.message-link:hover {
+  text-decoration: underline;
+}

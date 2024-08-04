@@ -1,0 +1,25 @@
+.outer-container {
+  margin: 1rem;
+}
+
+.payment-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.payment-body {
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.payment-id {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.payment-amount {
+  margin-top: 10px;
+  font-weight: bold;
+}

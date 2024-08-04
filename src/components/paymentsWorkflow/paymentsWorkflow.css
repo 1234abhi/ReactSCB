@@ -1,0 +1,106 @@
+.payments-container {
+  margin: 1rem;
+}
+
+.workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+}
+
+.icons .filter-icon,
+.icons .expand-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.tabs {
+  margin-bottom: 2rem;
+}
+
+.tabs button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tabs button:hover {
+  color: #007bff;
+  border-bottom: 0.5px solid #007bff;
+}
+
+/* Create an active/current tablink class */
+.tabs button.active {
+  /* background-color: #ccc; */
+  color: #007bff;
+  border-bottom: 0.5px solid #007bff;
+}
+
+.content {
+  text-align: center;
+}
+
+.workflow {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bar-chart {
+  text-align: center;
+  position: relative;
+}
+
+.bar {
+  width: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.value {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 24px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chart-label {
+  max-width: 10px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.chart-label p:hover {
+  color: blue;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  /* position: absolute; */
+  top: 150px; /* Match this to the bar-chart height */
+}
