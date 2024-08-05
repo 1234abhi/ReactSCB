@@ -1,16 +1,17 @@
 .quick-navigation {
   margin: 1rem;
+  background-color: #f9f9f9;
 }
 
 .quick-navigation-header {
-  background-color: #007bff;
+  background-color: #0556a7;
   color: white;
   padding: 10px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-ul {
+.quick-navigation-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -27,7 +28,7 @@ li {
 .item-title {
   font-weight: 500;
   font-size: 20px;
-  color: #007bff;
+  color: #0556a7;
   display: block;
 }
 

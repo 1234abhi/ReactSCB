@@ -63,23 +63,4 @@ export const pendingtasksData = [
       },
     ],
   },
-  {
-    id: 5,
-    total: 830,
-    description: "Pending Authorization demo",
-    details: [
-      {
-        title: "Payments",
-        count: 556,
-      },
-      {
-        title: "Payment Batches",
-        count: 11,
-      },
-      {
-        title: "Payees",
-        count: 263,
-      },
-    ],
-  },
 ];

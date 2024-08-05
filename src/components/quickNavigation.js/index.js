@@ -25,7 +25,7 @@ const QuickNavigation = () => {
   return (
     <div className="quick-navigation">
       <div className="quick-navigation-header">Quick Navigation</div>
-      <ul>
+      <ul className="quick-navigation-list">
         {navigationItems.map((item, index) => (
           <>
             <li key={index}>

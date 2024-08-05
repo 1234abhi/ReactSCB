@@ -4,7 +4,7 @@ import PendingTasks from "./components/pendingTasks/index.js";
 import PriorityMessage from "./components/priorityMessge/index";
 import "./App.css";
 import Home from "./components/Home";
-import PaymentPendingApproval from "./paymentPendingApproval/PaymentPendingApproval";
+import PaymentPendingApproval from "./components/paymentPendingApproval/PaymentPendingApproval.js";
 import QuickNavigation from "./components/quickNavigation.js";
 import PaymentsWorkflow from "./components/paymentsWorkflow/index.js";
 

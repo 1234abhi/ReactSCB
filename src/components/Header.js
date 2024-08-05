@@ -4,6 +4,7 @@ import AddHomeOutlinedIcon from "@mui/icons-material/AddHomeOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import PowerSettingsNewOutlinedIcon from "@mui/icons-material/PowerSettingsNewOutlined";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 const Header = () => {
   return (
@@ -13,8 +14,10 @@ const Header = () => {
           style={{
             display: "flex",
             alignItems: "center",
+            gap: "0.5rem",
           }}
         >
+          <MenuOutlinedIcon />
           Menu
         </div>
         <div

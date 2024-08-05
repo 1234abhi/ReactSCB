@@ -14,7 +14,9 @@ const PaymentsWorkflow = () => {
   return (
     <div className="payments-container">
       <div className="workflow-header">
-        <p>PAYMENTS IN LAST 7 DAYS (MY VIEW)</p>
+        <p style={{ fontSize: "16px", fontWeight: "bold" }}>
+          PAYMENTS IN LAST 7 DAYS (MY VIEW)
+        </p>
         <div className="icons">
           <span className="filter-icon">
             <FilterAltOutlinedIcon />
@@ -41,8 +43,8 @@ const PaymentsWorkflow = () => {
       <div className="content">
         {activeTab === 0 && (
           <div className="workflow">
-            <BarChart label="Processed by Bank" value={25} color="green" />
-            <BarChart label="Rejected by Bank" value={14} color="blue" />
+            <BarChart label="Processed by Bank" value={25} color="#3de98d" />
+            <BarChart label="Rejected by Bank" value={14} color="#21adfe" />
           </div>
         )}
         {activeTab === 1 && (

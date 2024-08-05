@@ -54,12 +54,12 @@ const PendingTasks = () => {
         >
           CASH
         </button>
-        <button
+        {/* <button
           className={`tablinks ${activeTab === 1 ? "active" : ""}`}
           onClick={() => changeTab(1)}
         >
           CASHLESS
-        </button>
+        </button> */}
       </div>
       {activeTab === 0 && (
         <>
@@ -75,9 +75,19 @@ const PendingTasks = () => {
               );
             })}
           </div>
-          <footer className="footer">
+          <footer className="pending-task-footer">
             <CachedOutlinedIcon />
             Last Updated 17/07/2024 04:09:44 PM
+            {[...Array(totalPage)].map((_, i) => {
+              return (
+                <span
+                  key={i}
+                  className={`current-page-circle ${
+                    currentPage === i ? "page-active" : ""
+                  }`}
+                ></span>
+              );
+            })}
           </footer>
           <div className="pagination">
             <button
@@ -98,7 +108,6 @@ const PendingTasks = () => {
               <ArrowForwardIosOutlinedIcon />
             </button>
           </div>
-          <div className="currentPage-circle"></div>
         </>
       )}
       {activeTab === 1 && <div className="tasks">No Data</div>}
