@@ -9,6 +9,9 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 const Header = () => {
   return (
     <div className="header-container">
+      <div className="hamburger-icon">
+        <MenuOutlinedIcon />
+      </div>
       <div>
         <div
           style={{

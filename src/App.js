@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import PaymentPendingApproval from "./components/paymentPendingApproval/PaymentPendingApproval.js";
 import QuickNavigation from "./components/quickNavigation.js";
 import PaymentsWorkflow from "./components/paymentsWorkflow/index.js";
+import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 
 const App = () => {
   return (
@@ -30,7 +31,14 @@ const App = () => {
           <PaymentsWorkflow />
         </div>
       </div>
-      <button className="feedback-button">Give feedback</button>
+      <button className="feedback-button">
+        <CampaignOutlinedIcon
+          style={{
+            transform: "rotate(50deg)",
+          }}
+        />
+        Give feedback
+      </button>
     </div>
   );
 };

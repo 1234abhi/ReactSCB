@@ -6,6 +6,10 @@
   color: white;
   padding: 20px;
 
+  .hamburger-icon {
+    display: none;
+  }
+
   div {
     display: flex;
     gap: 1rem;
@@ -13,5 +17,16 @@
 
   button {
     border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    .hamburger-icon {
+      display: block;
+    }
+    div {
+      display: none;
+    }
   }
 }
