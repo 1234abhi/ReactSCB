@@ -1,63 +1,44 @@
-.app {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+.App {
+  text-align: center;
 }
 
-.feedback-button {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  z-index: 1000;
-  border-radius: 5px 5px 0 0;
-  font-size: 14px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  gap: 0.4rem;
+  flex-direction: column;
   align-items: center;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  background-color: #0047ab;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  padding: 10px;
 }
 
-.sidebar {
-  width: 200px;
-  background-color: #f4f4f4;
-  padding: 20px;
+.App-link {
+  color: #61dafb;
 }
 
-.main-content {
-  display: flex;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.dashboard {
-  flex: 1;
-  padding: 20px;
-}
-
-.pending-tasks,
-.priority-message,
-.payments-overview {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.payment-status div {
-  display: flex;
-  justify-content: space-between;
+.outer_container {
+  margin: 1rem 2rem;
 }
 
 .container {
@@ -104,9 +85,5 @@
 
   .item {
     margin-bottom: 1rem;
-  }
-
-  .header {
-    display: none;
   }
 }

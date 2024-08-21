@@ -1,0 +1,21 @@
+.pending_tasks_container {
+  position: relative !important;
+}
+
+.pagination-button-prev {
+  border: none !important;
+  position: absolute !important;
+  background: transparent !important;
+  top: 50% !important;
+  left: -2% !important;
+  cursor: pointer !important;
+}
+
+.pagination-button-next {
+  border: none !important;
+  position: absolute !important;
+  background: transparent !important;
+  top: 50% !important;
+  right: -2% !important;
+  cursor: pointer !important;
+}

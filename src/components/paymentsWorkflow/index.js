@@ -1,87 +1,112 @@
 import React, { useState } from "react";
-import "./paymentsWorkflow.css";
+import { Box, IconButton, Tab, Tabs, Typography } from "@mui/material";
 import OpenInFullOutlinedIcon from "@mui/icons-material/OpenInFullOutlined";
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 import CachedOutlinedIcon from "@mui/icons-material/CachedOutlined";
+import { BarChart } from "@mui/x-charts/BarChart";
 
 const PaymentsWorkflow = () => {
   const [activeTab, setActiveTab] = useState(0);
 
-  const changeTab = (newTabId) => {
+  const changeTab = (event, newTabId) => {
     setActiveTab(newTabId);
   };
 
   return (
-    <div className="payments-container">
-      <div className="workflow-header">
-        <p style={{ fontSize: "16px", fontWeight: "bold" }}>
-          PAYMENTS IN LAST 7 DAYS (MY VIEW)
-        </p>
-        <div className="icons">
-          <span className="filter-icon">
+    <Box sx={{ m: 2, p: 2, bgcolor: "#f9f9f9", boxShadow: 3, borderRadius: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          bgcolor: "#0556a7",
+          color: "white",
+          p: 1,
+          borderRadius: 1,
+        }}
+      >
+        <Typography variant="h6">PAYMENTS IN LAST 7 DAYS (MY VIEW)</Typography>
+        <Box>
+          <IconButton color="inherit">
             <FilterAltOutlinedIcon />
-          </span>
-          <span className="expand-icon">
+          </IconButton>
+          <IconButton color="inherit">
             <OpenInFullOutlinedIcon />
-          </span>
-        </div>
-      </div>
-      <div className="tabs">
-        <button
-          className={`tablink ${activeTab === 0 ? "active" : ""}`}
-          onClick={() => changeTab(0)}
-        >
-          CLIENT WORKFLOW
-        </button>
-        <button
-          className={`tablink ${activeTab === 1 ? "active" : ""}`}
-          onClick={() => changeTab(1)}
-        >
-          BANK WORKFLOW
-        </button>
-      </div>
-      <div className="content">
+          </IconButton>
+        </Box>
+      </Box>
+      <Tabs
+        value={activeTab}
+        onChange={changeTab}
+        indicatorColor="primary"
+        textColor="primary"
+        sx={{ mb: 2 }}
+      >
+        <Tab label="CLIENT WORKFLOW" />
+        <Tab label="BANK WORKFLOW" />
+      </Tabs>
+      <Box textAlign="center">
         {activeTab === 0 && (
-          <div className="workflow">
-            <BarChart label="Processed by Bank" value={25} color="#3de98d" />
-            <BarChart label="Rejected by Bank" value={14} color="#21adfe" />
-          </div>
+          <Box display="flex" justifyContent="center" alignItems="center">
+            <WorkflowBarChart />
+          </Box>
         )}
-        {activeTab === 1 && (
-          <div className="workflow">
-            <p>No Data</p>
-          </div>
-        )}
-      </div>
-      <footer className="footer">
+        {activeTab === 1 && <Typography>No Data</Typography>}
+      </Box>
+      <Box
+        display="flex"
+        alignItems="center"
+        color="grey.600"
+        fontSize={12}
+        mt={3}
+      >
         <CachedOutlinedIcon />
-        Last Updated 17/07/2024 04:09:41 PM
-      </footer>
-    </div>
+        <Typography variant="body2" ml={1}>
+          Last Updated 17/07/2024 04:09:41 PM
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 
-const BarChart = ({ label, value, color }) => {
+const WorkflowBarChart = () => {
+  const data = [
+    { label: "Processed by Bank", value: 25, color: "#3de98d" },
+    { label: "Rejected by Bank", value: 14, color: "#21adfe" },
+  ];
+
   return (
-    <div className="bar-chart">
-      <div
-        className="bar"
-        style={{ height: `${value * 10}px`, backgroundColor: color }}
-      >
-        <span className="value">{value}</span>
-      </div>
-      <div
-        style={{
-          borderBottom: "1px solid black",
-          position: "absolute",
-          width: "100px",
-          //   top: "140px",
-          bottom: "85px",
-          right: "-40%",
-        }}
-      ></div>
-      <p className="chart-label">{label}</p>
-    </div>
+    <BarChart
+      width={340}
+      height={400}
+      series={[
+        {
+          data: data.map((item) => item.value),
+          color: data.map((item) => item.color),
+        },
+      ]}
+      xAxis={[
+        {
+          id: "barCategories",
+          data: data.map((item) => item.label),
+          scaleType: "band",
+          disableTicks: true,
+          labelFontSize: "8px",
+          categoryGapRatio: 0.4,
+          barGapRatio: 0,
+        },
+      ]}
+      yAxis={[
+        {
+          disableLine: true,
+          disableTicks: true,
+          display: false,
+          hideTooltip: true,
+          data: null,
+        },
+      ]}
+      tooltip={false}
+    />
   );
 };
 
